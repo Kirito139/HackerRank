@@ -11,17 +11,14 @@ import Foundation
 
 func bonAppetit(bill: [Int], k: Int, b: Int) -> Void {
     // Write your code here
-    print(bill[0 ... bill.endIndex-1])
-    print(k)
-    print(b)
+   
     var total = 0
     for i in bill {
         total += i
     }
-    if total - k == b {
+    if (total - bill[k]) / 2 == b {
         print("Bon Appetit")
     } else {
-        print(b - (total - bill[k]))
+        print(b - (total - bill[k])/2)
     }
 }
-bonAppetit(bill: [3, 10, 2, 9], k: 1, b: 12)
